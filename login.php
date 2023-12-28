@@ -6,7 +6,7 @@
 
     if (isset($_SESSION['user'])) {
         
-        header ("Location: index.php");
+        header ("Location: privado.php");
         
     }
 
@@ -38,7 +38,7 @@
         if ($result !== false) {
             
             $_SESSION['user'] = $user;
-            header("Location: index.php");
+            header("Location: privado.php");
             
         } else {
             
