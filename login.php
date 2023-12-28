@@ -1,4 +1,8 @@
-<?php
+<?php session_start();
+
+    if (isset($_SESSION['usuario'])) {
+        header("Location: index.php");
+    }
     
     require_once "./core/Interruptor.php";
 

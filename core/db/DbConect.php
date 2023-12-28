@@ -32,5 +32,21 @@ class DbConect {
     public static function selfprotection () {
         echo htmlspecialchars($_SERVER['PHP_SELF']);
     }
+
+    public static function getCurrentDateTime () {
+        date_default_timezone_set('America/Denver');
+
+        $info = getdate();
+        $date = $info['mday'];
+        $month = $info['mon'];
+        $year = $info['year'];
+        $hour = $info['hours'];
+        $min = $info['minutes'];
+        $sec = $info['seconds'];
+
+        $current_date = "$date/$month/$year $hour:$min:$sec";
+
+        return $current_date;
+    }
     
 }
