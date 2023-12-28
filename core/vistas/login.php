@@ -37,7 +37,7 @@
                 FORMULARIO LogIn.
             </h1>
 
-            <form action="" method="" class="borde">
+            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" class="borde">
 
                 <p class="fila">
                     Usuario
