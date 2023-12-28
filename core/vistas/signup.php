@@ -34,42 +34,31 @@
         <main class="columna">
 
             <h1 class="borde">
-                FORMULARIO New Record.
+                FORMULARIO SignUp.
             </h1>
 
             <form action="" method="" class="borde">
-                    
-                <p class="fila">
-                    Titulo
-                    <input type="text" name="titulo" 
-                    placeholder="titulo del articulo">
-                </p>
 
                 <p class="fila">
                     Usuario
                     <input type="text" name="usuario" 
-                    placeholder="escritor del articulo">
+                    placeholder="User Name">
                 </p class="fila">
 
                 <p class="fila">
-                    Imagen
-                    <select name="imagen">
-                        <option value="versoftly1.png">versoftly 1</option>
-                        <option value="versoftly2.png">versoftly 2</option>
-                        <option value="versoftly3.png">versoftly 3</option>
-                    </select>
-                </p>
-                
+                    Contrase&ntilde;a
+                    <input type="password" name="password" 
+                    placeholder="password">
+                </p class="fila">
 
                 <p class="fila">
-                    Contenido
-                    <textarea name="contenido" 
-                    placeholder="Contenido del articulo">
-                    </textarea>
-                </p>
+                    Repite la Contrase&ntilde;a
+                    <input type="password" name="repassword" 
+                    placeholder="password">
+                </p class="fila">
 
                 <div class="borde">
-                    <input type="submit" value="Agregar" class="boton">
+                    <input type="submit" value="Registrar" class="boton">
                 </div>
 
             </form>
@@ -113,22 +102,6 @@
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                             <path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4" />
                             <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4" />
-                        </svg>
-
-                    </a>
-
-                    <a href="signup.php" class="boton">
-
-                        <svg xmlns="http://www.w3.org/2000/svg" 
-                            class="icon icon-tabler icon-tabler-user-plus" width="44" 
-                            height="44" viewBox="0 0 24 24" stroke-width="1.5" 
-                            stroke="#00b341" fill="none" stroke-linecap="round" 
-                            stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
-                            <path d="M16 19h6" />
-                            <path d="M19 16v6" />
-                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4" />
                         </svg>
 
                     </a>

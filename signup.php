@@ -13,6 +13,6 @@
 
     interruptor (1,"./core/configuraciones.php");
 
-    interruptor (1,"./core/vistas/update.php");
+    interruptor (1,"./core/vistas/signup.php");
    
 ?>
