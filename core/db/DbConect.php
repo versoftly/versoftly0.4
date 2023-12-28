@@ -28,5 +28,9 @@ class DbConect {
         }
         
     }
+
+    public static function selfprotection () {
+        echo htmlspecialchars($_SERVER['PHP_SELF']);
+    }
     
 }
