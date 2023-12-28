@@ -9,7 +9,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "versoftly";
-    $database = "mosteigd_blog";
+    $database = "mosteigd_versoftlyfpf";
     
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
@@ -24,21 +24,22 @@
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         $titulo = htmlspecialchars($_POST['titulo']);
-        $texto = $_POST['texto'];
-        $thumb = $_FILES['foto']['name'];
+        $texto = $_POST['contenido'];
+        $thumb = $_POST['imagen'];
         
-        $file = "core/".$_FILES['foto']['name'];
+        $file = "core/".$_POST['imagen'];
         
         move_uploaded_file($thumb,$file);
         
-        $stmt = $conn->prepare("INSERT INTO articulos (titulo,texto,thumb,user) VALUES 
-        (:titulo,:texto,:thumb,:user)");
+        $stmt = $conn->prepare("INSERT INTO ideas (usuario,titulo_de_la_idea,contenido_de_la_idea,portada) VALUES 
+        (:user,:titulo,:texto,:thumb)");
         
         $stmt->execute([
+            ":user" => $_SESSION['user'],
             ":titulo" => $titulo,
-            ":thumb" => $thumb,
             ":texto" => $texto,
-            ":user" => $_SESSION['user']
+            ":thumb" => $thumb
+            
         ]);
         
         header("Location: index.php");

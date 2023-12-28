@@ -39,16 +39,19 @@
 
             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" class="borde">
                     
+                <input type="hidden" name="id" value="<?php echo $post['id']; ?>">
                 <p class="fila">
                     Titulo
                     <input type="text" name="titulo" 
-                    placeholder="titulo del articulo">
+                    placeholder="titulo del articulo"
+                    value="<?php echo $post['titulo_de_la_idea']; ?>">
                 </p>
 
                 <p class="fila">
                     Usuario
                     <input type="text" name="usuario" 
-                    placeholder="escritor del articulo">
+                    placeholder="escritor del articulo"
+                    value="<?php echo $post['usuario']; ?>">
                 </p class="fila">
 
                 <p class="fila">
@@ -58,13 +61,14 @@
                         <option value="versoftly2.png">versoftly 2</option>
                         <option value="versoftly3.png">versoftly 3</option>
                     </select>
+                    <input type="hidden" name="actual" value="<?php echo $post['portada']; ?>">
                 </p>
-                
 
                 <p class="fila">
                     Contenido
                     <textarea name="contenido" 
                     placeholder="Contenido del articulo">
+                    <?php echo $post['contenido_de_la_idea']; ?>"
                     </textarea>
                 </p>
 
