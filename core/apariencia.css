@@ -73,13 +73,18 @@ ul {
     text-decoration: none;
     margin: 20px autos;
     display: block;
+    transition: all 1s ease-in-out;
 }
 
-.boton:hover {background-color: var(--darkgreen)}
+.boton:hover {
+    background-color: var(--darkgreen);
+    color: var(--mint);
+}
 
 .boton:active {
     background-color: var(--darkgreen);
     box-shadow: 0 5px var(--traditional);
+    color: var(--mint);
     transform: translateY(4px);
 }
 
