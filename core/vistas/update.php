@@ -63,7 +63,7 @@
 
                 <p class="fila">
                     Contenido
-                    <textarea id="contenido" name="contenido" 
+                    <textarea name="contenido" 
                     placeholder="Contenido del articulo">
                     </textarea>
                 </p>
