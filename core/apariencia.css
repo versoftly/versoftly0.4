@@ -1,0 +1,130 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+:root {
+    --darkaquamarine: #161f1b;
+    --celadon: #93e5ab;
+    --mint: rgba(181, 236, 210, 0.637);
+    --darkcyan: #a1d9dfab;
+    --darkgreen: #00241b;
+    --traditional: #464e91e3;
+}
+
+html {
+    font-size: 62.5%;
+    color: var(--aquamarine);
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Krub', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+.columna {
+    border: 1px solid var(--darkcyan);
+    width: 85%;
+    height: auto;
+    margin: 30px auto;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: var(--celadon);
+}
+
+.fila {
+    border: 1px solid var(--traditional);
+    width: 100%;
+    min-height: 10rem;
+    margin: 30px auto;
+    padding: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: var(--darkcyan);
+}
+
+.w35p {
+    width: 35%;
+}
+
+.boton {
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    background-color: var(--darkcyan);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px var(--traditional);
+    text-decoration: none;
+    margin: 20px autos;
+    display: block;
+}
+
+.boton:hover {background-color: var(--darkgreen)}
+
+.boton:active {
+    background-color: var(--darkgreen);
+    box-shadow: 0 5px var(--traditional);
+    transform: translateY(4px);
+}
+
+.centxt {
+    text-align: center;
+}
+
+.borde {
+    border: 2px solid var(--darkaquamarine);
+    padding: 10px;
+    margin: 20px auto;
+}
+
+form {
+    width: 100%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+}
+
+form input, form p, form select  {
+    padding: 10px;
+    text-align: center;
+    min-width: 198px;
+    max-width: 100%;
+}
+
+form textarea {
+    min-width: 198px;
+    max-width: 198px;
+    min-height: 150px;
+    max-height: 250px;
+}
+
+@media screen and (max-width: 770px) {
+    .columna , .fila , .logo {
+        margin: 1px auto;
+        padding: 1px;
+        width: 100%;
+        border: none;
+    }
+    .ocultar {
+        display: none;
+    }
+}
