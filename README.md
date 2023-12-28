@@ -29,7 +29,7 @@
     </pre><br>
     Abrimos el editor de codigo :\$
     <pre>sudo nano /etc/apache2/sites-available/versoftlyfpf.conf</pre><br><br>
-    Escribimos en el interior del archivo lo sigiente :<br><br>
+    Escribimos en el interior del archivo lo siguiente :<br><br>
     <pre>
         &lt;VirtualHost *:80&gt;
             ServerName  versoftlyfpf.lcl
@@ -37,7 +37,7 @@
             DocumentRoot /var/www/versoftlyfpf
         <&lt;/VirtualHost&gt;
     </pre><br><br>
-    Activamos el virtualhosts :<pre>\$ sudo a2ensite versoftlyfpf.conf</pre><br>
+    Activamos el virtualhost :<pre>\$ sudo a2ensite versoftlyfpf.conf</pre><br>
     Desactivamos la configuracion por default :<pre>\$ sudo a2dissite 000-default.conf</pre><br>
     Recargamos el servidor web :<pre>\$ systemctl reload apache2</pre><br>
     Checamos que todo este bien :<pre>\$ sudo apache2ctl configtest</pre><br>
