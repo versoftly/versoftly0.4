@@ -1,33 +1,55 @@
 <?php session_start();
 
-    if (isset($_SESSION['usuario'])) {
+if (isset($_SESSION['user'])) {
+    header("Location: index.php");
+}
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $user = filter_var(strtolower($_POST['usuario']),FILTER_SANITIZE_STRING);
+    $pass = $_POST['password'];
+    $rpass = $_POST['repassword'];
+    
+    $errores = '';
+    
+    if (empty($user) || empty($pass) || empty($rpass)) {
+        $errores = "<li>Hay campos vacios</li>";
+    } else {
+        
+        $servername = "localhost";
+        $username = "root";
+        $password = "versoftly";
+        $database = "mosteigd_login_signup";
+
+        try {
+          $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+        } catch(PDOException $e) {
+            echo "error ".$e->getMessage();
+        }
+        
+        $statement = $conn->prepare("SELECT * FROM login_signup WHERE user = :user LIMIT 1");
+        $statement->execute([':user'=>$user]);
+        $result = $statement->fetch();
+        
+        if ($result != false) {
+            $errores .= "<li>el user ya existe.</li>";
+        }
+        
+        $pass = hash('sha512',$pass);
+        $rpass = hash('sha512',$rpass);
+        
+    }
+    
+    if ($errores == '') {
+        $statement = $conn->prepare("INSERT INTO login_signup (user,password) VALUES (:user,:pass)");
+        $statement->execute([
+            ":user" => $user,
+            ":pass" => $pass
+        ]);
+        
         header("Location: index.php");
     }
     
-    require_once "./core/Interruptor.php";
-
-    interruptor (1,"./core/configuraciones.php");
-
-    interruptor (1,"./core/db/DbConect.php");
-
-    if ($_SERVER['REQUEST_METHOD'] == "POST") {
-        $usuario = DbConect::valUser($_POST['usuario']);
-        $password = $_POST['password'];
-        $repassword = $_POST['repassword'];
-        
-        if (empty($usuario) or empty($password) or empty(repassword)) {
-            $errors = "Ingresa la Informacion requerida porfavor.";
-        } else {
-
-            $conexion = new DbConect ([
-                "servername" => "localhost",
-                "username" => "root",
-                "password" => "versoftly",
-                "database" => "mosteigd_login_signup"
-            ]);
-
-        }
-    }
+}
 
     require_once("./core/vistas/signup.php");
    

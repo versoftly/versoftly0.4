@@ -35,7 +35,7 @@
 
             <h1 class="borde">
                 FORMULARIO SignUp.
-                <?php if($errors !== ''): ?>
+                <?php if($errors != ''): ?>
                     <div class="fila">
                         <p class="columna" style="border: 3px solid red;">
                             Ocurri&oacute; un Error<br>
@@ -45,7 +45,8 @@
                 <?php endif; ?>
             </h1>
 
-            <form action="<?php DbConect::selfprotection(); ?>" method="POST" class="borde">
+            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" 
+            class="borde">
 
                 <p class="fila">
                     Usuario

@@ -37,7 +37,7 @@
                 FORMULARIO New Record.
             </h1>
 
-            <form action="<?php DbConect::selfprotection(); ?>" method="POST" class="borde">
+            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" class="borde">
                     
                 <p class="fila">
                     Titulo
