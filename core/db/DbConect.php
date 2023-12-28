@@ -48,5 +48,9 @@ class DbConect {
 
         return $current_date;
     }
+
+    public static function valUser ($user) {
+        return htmlspecialchars(strtolower($user));
+    }
     
 }
