@@ -2,6 +2,15 @@
     
     require_once "./core/Interruptor.php";
 
+    interruptor (1,"./core/db/DbConect.php");
+
+    $conexion = new DbConect ([
+        "servername" => "localhost",
+        "username" => "root",
+        "password" => "versoftly",
+        "database" => "mosteigd_versoftlyfps"
+    ]);
+
     interruptor (1,"./core/configuraciones.php");
 
     interruptor (1,"./core/vistas/new.php");

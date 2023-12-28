@@ -116,10 +116,10 @@ form input, form p, form select  {
 }
 
 form textarea {
-    min-width: 198px;
-    max-width: 198px;
-    min-height: 150px;
-    max-height: 250px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 350px;
+    max-height: 100%;
 }
 
 @media screen and (max-width: 770px) {

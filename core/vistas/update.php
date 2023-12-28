@@ -54,7 +54,9 @@
                 <p class="fila">
                     Imagen
                     <select name="imagen">
-                        <option value="gnuLinux.jpg">GNU|Linux</option>
+                        <option value="versoftly1.png">versoftly 1</option>
+                        <option value="versoftly2.png">versoftly 2</option>
+                        <option value="versoftly3.png">versoftly 3</option>
                     </select>
                 </p>
                 
