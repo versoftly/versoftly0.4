@@ -10,6 +10,7 @@
     $username = "root";
     $password = "versoftly";
     $database = "mosteigd_versoftlyfpf";
+    $errores = '';
     
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
@@ -41,21 +42,27 @@
             
         }
 
-        $timestamp = date('Y-m-d H:i:s', mktime(0, 0, 0, 7, 1, 2000));
-        
-        $data = [
-            ':id' => $id,
-            ':titulo' => $titulo,
-            ':texto' => $texto,
-            ':fecha' => $timestamp,
-            ':thumb' => $thumb
-        ];
-        
-        $sql = "UPDATE ideas SET titulo_de_la_idea=:titulo, contenido_de_la_idea=:texto, fecha_de_actualizacion=:fecha, portada=:thumb WHERE id=:id";
-        $stmt= $conn->prepare($sql);
-        $stmt->execute($data);
-        
-        header("Location: privado.php");
+        if (empty($titulo) || empty($texto) || empty($thumb)|| empty($id)) {
+            $errores = "<li>Hay campos vacios</li>";
+        } else {
+
+            $timestamp = date('Y-m-d H:i:s', mktime(0, 0, 0, 7, 1, 2000));
+            
+            $data = [
+                ':id' => $id,
+                ':titulo' => $titulo,
+                ':texto' => $texto,
+                ':fecha' => $timestamp,
+                ':thumb' => $thumb
+            ];
+            
+            $sql = "UPDATE ideas SET titulo_de_la_idea=:titulo, contenido_de_la_idea=:texto, fecha_de_actualizacion=:fecha, portada=:thumb WHERE id=:id";
+            $stmt= $conn->prepare($sql);
+            $stmt->execute($data);
+            
+            header("Location: privado.php");
+
+        }
         
     } else {
         

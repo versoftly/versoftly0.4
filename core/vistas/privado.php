@@ -35,11 +35,25 @@
         <main class="columna">
             <?php
                 if (empty($articulos)) {
-                    echo "
-                     <div class='borde'>
-                     <div class='columna'>404 Not Articles Found.</div>
+                    echo '
+                     <div class="borde">
+                        <div class="columna">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                            class="icon icon-tabler icon-tabler-error-404" 
+                            width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" 
+                            stroke="#c9de00" fill="none" stroke-linecap="round" 
+                            stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M3 7v4a1 1 0 0 0 1 1h3" />
+                                <path d="M7 7v10" />
+                                <path d="M10 8v8a1 1 0 0 0 1 1h2a1 1 0 0 0 1 -1v-8a1 1 0 0 0 -1 
+                                -1h-2a1 1 0 0 0 -1 1z" />
+                                <path d="M17 7v4a1 1 0 0 0 1 1h3" />
+                                <path d="M21 7v10" />
+                            </svg> Not Articles Found.
+                        </div>
                      </div>
-                    ";
+                    ';
                 } else {
                     foreach($articulos as $articulo) {
                         echo '
@@ -110,7 +124,7 @@
             <div class="fila">
 
                 <a href="new.php" class="boton">
-
+                    New 
                     <svg xmlns="http://www.w3.org/2000/svg" 
                         class="icon icon-tabler icon-tabler-pencil-plus" 
                         width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" 
@@ -126,7 +140,7 @@
                 </a>
 
                 <a href="logout.php" class="boton">
-
+                    LogOut 
                     <svg xmlns="http://www.w3.org/2000/svg" 
                         class="icon icon-tabler icon-tabler-logout" width="44" 
                         height="44" viewBox="0 0 24 24" stroke-width="1.5" 
@@ -141,7 +155,7 @@
                 </a>
                
                 <a href="#top" class="boton">
-
+                    Top 
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler 
                         icon-tabler-arrow-big-up" width="44" height="44" viewBox="0 0 24 24" 
                         stroke-width="1.5" stroke="#00b341" fill="none" stroke-linecap="round" 

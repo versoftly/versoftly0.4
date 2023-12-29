@@ -35,6 +35,14 @@
 
             <h1 class="borde">
                 FORMULARIO LogIn.
+                <?php if($errores != ''): ?>
+                    <div class="fila">
+                        <p class="columna" style="border: 3px solid red;">
+                            Ocurri&oacute; un Error<br>
+                            <?php echo $errores; ?>
+                        </p>
+                    </div>
+                <?php endif; ?>
             </h1>
 
             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" class="borde">
@@ -72,7 +80,7 @@
                 <div class="fila">
 
                     <a href="index.php" class="boton">
-
+                        Home 
                         <svg xmlns="http://www.w3.org/2000/svg" 
                             class="icon icon-tabler icon-tabler-home" 
                             width="44" height="44" viewBox="0 0 24 24" 
@@ -87,7 +95,7 @@
                     </a>
 
                     <a href="signup.php" class="boton">
-
+                        SignUp 
                         <svg xmlns="http://www.w3.org/2000/svg" 
                             class="icon icon-tabler icon-tabler-user-plus" width="44" 
                             height="44" viewBox="0 0 24 24" stroke-width="1.5" 
@@ -103,7 +111,7 @@
                     </a>
 
                     <a href="#top" class="boton">
-
+                        Top 
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler 
                             icon-tabler-arrow-big-up" width="44" height="44" viewBox="0 0 24 24" 
                             stroke-width="1.5" stroke="#00b341" fill="none" stroke-linecap="round" 

@@ -12,7 +12,7 @@
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
-        $user = filter_var(strtolower($_POST['usuario']),FILTER_SANITIZE_STRING);
+        $user = htmlspecialchars(strtolower($_POST['usuario']));
         $pass = hash('sha512',$_POST['password']);
         
         $servername = "localhost";

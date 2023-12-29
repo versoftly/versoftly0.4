@@ -106,7 +106,7 @@
             <div class="fila">
 
                 <a href="signup.php" class="boton">
-
+                    SignUp 
                     <svg xmlns="http://www.w3.org/2000/svg" 
                         class="icon icon-tabler icon-tabler-user-plus" width="44" 
                         height="44" viewBox="0 0 24 24" stroke-width="1.5" 
@@ -122,7 +122,7 @@
                 </a>
 
                 <a href="login.php" class="boton">
-
+                        LogIn 
                         <svg xmlns="http://www.w3.org/2000/svg" 
                             class="icon icon-tabler icon-tabler-password" width="44" 
                             height="44" viewBox="0 0 24 24" stroke-width="1.5" 
@@ -143,7 +143,7 @@
                     </a>
 
                 <a href="#top" class="boton">
-
+                    top
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler 
                         icon-tabler-arrow-big-up" width="44" height="44" viewBox="0 0 24 24" 
                         stroke-width="1.5" stroke="#00b341" fill="none" stroke-linecap="round" 

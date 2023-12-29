@@ -59,7 +59,7 @@
             <div class="fila">
 
                 <a href="privado.php" class="boton">
-
+                    
                     <svg xmlns="http://www.w3.org/2000/svg" 
                         class="icon icon-tabler icon-tabler-square-letter-x" 
                         width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" 

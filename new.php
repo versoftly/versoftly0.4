@@ -10,6 +10,7 @@
     $username = "root";
     $password = "versoftly";
     $database = "mosteigd_versoftlyfpf";
+    $errores = '';
     
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
@@ -28,21 +29,26 @@
         $thumb = $_POST['imagen'];
         
         $file = "core/".$_POST['imagen'];
+
+        if (empty($titulo) || empty($texto) || empty($thumb)) {
+            $errores = "<li>Hay campos vacios</li>";
+        } else {
         
-        move_uploaded_file($thumb,$file);
-        
-        $stmt = $conn->prepare("INSERT INTO ideas (usuario,titulo_de_la_idea,contenido_de_la_idea,portada) VALUES 
-        (:user,:titulo,:texto,:thumb)");
-        
-        $stmt->execute([
-            ":user" => $_SESSION['user'],
-            ":titulo" => $titulo,
-            ":texto" => $texto,
-            ":thumb" => $thumb
+            move_uploaded_file($thumb,$file);
             
-        ]);
-        
-        header("Location: privado.php");
+            $stmt = $conn->prepare("INSERT INTO ideas (usuario,titulo_de_la_idea,contenido_de_la_idea,portada) VALUES 
+            (:user,:titulo,:texto,:thumb)");
+            
+            $stmt->execute([
+                ":user" => $_SESSION['user'],
+                ":titulo" => $titulo,
+                ":texto" => $texto,
+                ":thumb" => $thumb
+                
+            ]);
+            
+            header("Location: privado.php");
+        }
         
     }
             
