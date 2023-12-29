@@ -1,10 +1,6 @@
 <?php session_start();
 
-
-$servername = "localhost";
-$username = "root";
-$password = "versoftly";
-$database = "mosteigd_versoftlyfpf";
+require_once "core/configuraciones.php";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
