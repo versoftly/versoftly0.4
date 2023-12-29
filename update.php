@@ -5,11 +5,7 @@
     }
 
     require_once ("./core/configuraciones.php");
-
-    $servername = "localhost";
-    $username = "root";
-    $password = "versoftly";
-    $database = "mosteigd_versoftlyfpf";
+    
     $errores = '';
     
     try {

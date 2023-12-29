@@ -1,6 +1,6 @@
 <?php session_start();
 
-    require_once "./core/configuraciones.php";
+    require_once "./core/configuracionesLogin.php";
 
     $errores = '';
 
@@ -14,11 +14,6 @@
         
         $user = htmlspecialchars(strtolower($_POST['usuario']));
         $pass = hash('sha512',$_POST['password']);
-        
-        $servername = "localhost";
-        $username = "root";
-        $password = "versoftly";
-        $database = "mosteigd_login_signup";
         
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);

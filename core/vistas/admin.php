@@ -105,6 +105,8 @@
                 &copy; copyrights . Todos los derechos reservados - Ramiro G. Glez 2023.
             </p>
 
+            <?php include_once("license.html"); ?>
+
             <div class="fila">
 
                 <a href="privado.php" class="boton">

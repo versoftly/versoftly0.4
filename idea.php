@@ -8,11 +8,6 @@ if (!isset($_SESSION['user'])) {
     
 }
 
-$servername = "localhost";
-$username = "root";
-$password = "versoftly";
-$database = "mosteigd_versoftlyfpf";
-
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
 } catch(PDOException $e) {

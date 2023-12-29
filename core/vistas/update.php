@@ -99,7 +99,9 @@
                 </b>
             </p>
 
-            <div class="columna">
+            <?php include_once("license.html"); ?>
+
+            <div class="borde">
 
                 <div class="fila">
 

@@ -95,6 +95,8 @@
                 </b>
             </p>
 
+            <?php include_once("license.html"); ?>
+
             <div class="columna">
 
                 <div class="fila">

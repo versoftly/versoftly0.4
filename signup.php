@@ -1,5 +1,7 @@
 <?php session_start();
 
+require_once "./core/configuracionesLogin.php";
+
 if (isset($_SESSION['user'])) {
     header("Location: privado.php");
 }
@@ -14,11 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (empty($user) || empty($pass) || empty($rpass)) {
         $errores = "<li>Hay campos vacios</li>";
     } else {
-        
-        $servername = "localhost";
-        $username = "root";
-        $password = "versoftly";
-        $database = "mosteigd_login_signup";
 
         try {
           $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
