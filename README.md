@@ -48,12 +48,3 @@
     <pre>127.0.1.1 versoftlyfpf.lcl</pre>
 </p>
 
-<h2>Coming soon features for next year.</h2>
-
-<ul>
-    <li>Todo List</li>
-    <li>Seccion Publica para ver posts de usuarios registrados</li>
-    <li>Carga de posts Relacionados a un usuario al iniciar sesion</li>
-    <li>backup para posts y usuarios eliminados</li>
-</ul>
-
