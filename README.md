@@ -51,9 +51,9 @@
 <h2>Coming soon features for next year.</h2>
 
 <ul>
-    <li>Implementar un Todo List</li>
-    <li>Implementar la Seccion Publica para ver posts de usuarios registrados</li>
-    <li>Implementar la Carga de posts Relacionados a un usuario al iniciar sesion</li>
-    <li>Implementar un backup para posts y usuarios eliminados</li>
+    <li>Todo List</li>
+    <li>Seccion Publica para ver posts de usuarios registrados</li>
+    <li>Carga de posts Relacionados a un usuario al iniciar sesion</li>
+    <li>backup para posts y usuarios eliminados</li>
 </ul>
 
