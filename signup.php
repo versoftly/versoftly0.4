@@ -6,12 +6,12 @@ if (isset($_SESSION['user'])) {
     header("Location: privado.php");
 }
 
+$errores = '';
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user = filter_var(strtolower($_POST['usuario']),FILTER_SANITIZE_STRING);
     $pass = $_POST['password'];
     $rpass = $_POST['repassword'];
-    
-    $errores = '';
     
     if (empty($user) || empty($pass) || empty($rpass)) {
         $errores = "<li>Hay campos vacios</li>";
