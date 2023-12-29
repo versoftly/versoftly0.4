@@ -43,11 +43,27 @@
                 } else {
                     foreach($articulos as $articulo) {
                         echo '
-
-                            <div class="borde w35p">
-                                <h3 class="fila">'
+                            <h3 class="fila">'
                                 .$articulo["titulo_de_la_idea"].
-                                '</h3>
+                                '
+
+                                <a href="idea.php?id='.$articulo["id"].'" class="boton">
+                
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                        class="icon icon-tabler icon-tabler-external-link" 
+                                        width="44" height="44" viewBox="0 0 24 24" 
+                                        stroke-width="1.5" stroke="#00b341" fill="none" 
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                        <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 
+                                        2h10a2 2 0 0 0 2 -2v-6" />
+                                        <path d="M11 13l9 -9" />
+                                        <path d="M15 4h5v5" />
+                                    </svg>
+                
+                                </a>
+
+
                                 <a href="update.php?id='.$articulo["id"].'" class="boton">
                 
                                     <svg xmlns="http://www.w3.org/2000/svg" 
@@ -61,8 +77,22 @@
                                     </svg>
                 
                                 </a>
-                            </div>
-                        
+
+                                <a href="delete.php?id='.$articulo["id"].'" class="boton">
+                                
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                        class="icon icon-tabler icon-tabler-square-letter-x" 
+                                        width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" 
+                                        stroke="#ff2825" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                        <path d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 
+                                        -2 2h-14a2 2 0 0 1 -2 -2z" />
+                                        <path d="M10 8l4 8" />
+                                        <path d="M10 16l4 -8" />
+                                    </svg>
+                                
+                                </a>
+                            </h3>
                         ';
                     }
                 }
@@ -98,15 +128,14 @@
                 <a href="logout.php" class="boton">
 
                     <svg xmlns="http://www.w3.org/2000/svg" 
-                        class="icon icon-tabler icon-tabler-door-exit" 
-                        width="44" height="44" viewBox="0 0 24 24" 
-                        stroke-width="1.5" stroke="#00b341" fill="none" 
-                        stroke-linecap="round" stroke-linejoin="round">
+                        class="icon icon-tabler icon-tabler-logout" width="44" 
+                        height="44" viewBox="0 0 24 24" stroke-width="1.5" 
+                        stroke="#ff2825" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M13 12v.01" />
-                        <path d="M3 21h18" />
-                        <path d="M5 21v-16a2 2 0 0 1 2 -2h7.5m2.5 10.5v7.5" />
-                        <path d="M14 7h7m-3 -3l3 3l-3 3" />
+                        <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 
+                        2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                        <path d="M9 12h12l-3 -3" />
+                        <path d="M18 15l3 -3" />
                     </svg>
 
                 </a>

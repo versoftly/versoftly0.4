@@ -55,7 +55,7 @@
         $stmt= $conn->prepare($sql);
         $stmt->execute($data);
         
-        header("Location: index.php");
+        header("Location: privado.php");
         
     } else {
         
@@ -70,7 +70,7 @@
         $post = $post->fetchAll();
         
         if(!$post) {
-            header("Location: index.php");
+            header("Location: privado.php");
         }
         
         $post = $post[0];

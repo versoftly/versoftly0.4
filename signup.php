@@ -1,7 +1,7 @@
 <?php session_start();
 
 if (isset($_SESSION['user'])) {
-    header("Location: index.php");
+    header("Location: privado.php");
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             ":pass" => $pass
         ]);
         
-        header("Location: index.php");
+        header("Location: login.php");
     }
     
 }

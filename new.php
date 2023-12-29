@@ -42,7 +42,7 @@
             
         ]);
         
-        header("Location: index.php");
+        header("Location: privado.php");
         
     }
             
