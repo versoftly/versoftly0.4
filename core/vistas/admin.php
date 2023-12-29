@@ -28,7 +28,6 @@
         <header class="columna">
 
             <div class="fila">
-                <h2 class="fila">Bienvenid(a/o) Se&ntilde;(a/o)r</2>
                 <h2 class="borde">
 
                     <svg xmlns="http://www.w3.org/2000/svg" 
@@ -50,7 +49,7 @@
         
         <main class="columna">
             <?php
-                if (empty($articulos)) {
+                if (empty($usuarios)) {
                     echo '
                      <div class="borde">
                         <div class="columna">
@@ -66,49 +65,18 @@
                                 -1h-2a1 1 0 0 0 -1 1z" />
                                 <path d="M17 7v4a1 1 0 0 0 1 1h3" />
                                 <path d="M21 7v10" />
-                            </svg> Not Articles Found.
+                            </svg> Not users Found.
                         </div>
                      </div>
                     ';
                 } else {
-                    foreach($articulos as $articulo) {
+                    foreach($usuarios as $usuario) {
                         echo '
                             <h3 class="fila">'
-                                .$articulo["titulo_de_la_idea"].
+                                .$usuario["user"].
                                 '
 
-                                <a href="idea.php?id='.$articulo["id"].'" class="boton">
-                
-                                    <svg xmlns="http://www.w3.org/2000/svg" 
-                                        class="icon icon-tabler icon-tabler-external-link" 
-                                        width="44" height="44" viewBox="0 0 24 24" 
-                                        stroke-width="1.5" stroke="#00b341" fill="none" 
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                        <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 
-                                        2h10a2 2 0 0 0 2 -2v-6" />
-                                        <path d="M11 13l9 -9" />
-                                        <path d="M15 4h5v5" />
-                                    </svg>
-                
-                                </a>
-
-
-                                <a href="update.php?id='.$articulo["id"].'" class="boton">
-                
-                                    <svg xmlns="http://www.w3.org/2000/svg" 
-                                        class="icon icon-tabler icon-tabler-refresh" width="44" 
-                                        height="44" viewBox="0 0 24 24" stroke-width="1.5" 
-                                        stroke="#00b341" fill="none" stroke-linecap="round" 
-                                        stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                        <path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4" />
-                                        <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4" />
-                                    </svg>
-                
-                                </a>
-
-                                <a href="delete.php?id='.$articulo["id"].'" class="boton">
+                                <a href="deleteUser.php?id='.$usuario["id"].'" class="boton">
                                 
                                     <svg xmlns="http://www.w3.org/2000/svg" 
                                         class="icon icon-tabler icon-tabler-square-letter-x" 
@@ -139,42 +107,8 @@
 
             <div class="fila">
 
-                <a href="new.php" class="boton">
-                    New 
-                    <svg xmlns="http://www.w3.org/2000/svg" 
-                        class="icon icon-tabler icon-tabler-pencil-plus" 
-                        width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" 
-                        stroke="#00b341" fill="none" stroke-linecap="round" 
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
-                        <path d="M13.5 6.5l4 4" />
-                        <path d="M16 19h6" />
-                        <path d="M19 16v6" />
-                    </svg>
-
-                </a>
-
-                <?php if(isset($_SESSION['type']) && $_SESSION['type'] == "root"): ?>
-
-                    <a href="admin.php" class="boton">
-                        Admin
-                        <svg xmlns="http://www.w3.org/2000/svg" 
-                            class="icon icon-tabler icon-tabler-tool" 
-                            width="44" height="44" viewBox="0 0 24 24" 
-                            stroke-width="1.5" stroke="#00b341" fill="none" 
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M7 10h3v-3l-3.5 -3.5a6 6 0 0 1 8 8l6 6a2 2 0 0 1 
-                            -3 3l-6 -6a6 6 0 0 1 -8 -8l3.5 3.5" />
-                        </svg>
-
-                    </a>
-
-                <?php endif; ?>
-
-                <a href="logout.php" class="boton">
-                    LogOut 
+                <a href="privado.php" class="boton">
+                    Back 
                     <svg xmlns="http://www.w3.org/2000/svg" 
                         class="icon icon-tabler icon-tabler-logout" width="44" 
                         height="44" viewBox="0 0 24 24" stroke-width="1.5" 

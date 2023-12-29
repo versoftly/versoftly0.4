@@ -38,6 +38,7 @@
         if ($result !== false) {
             
             $_SESSION['user'] = $user;
+            $_SESSION['type'] = $result['tipo'];
             header("Location: privado.php");
             
         } else {
