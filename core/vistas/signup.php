@@ -18,6 +18,9 @@
 
         <link rel="stylesheet" href="core/apariencia.css">
 
+        <link rel="icon" type="image/x-icon" 
+        href="http://versoftlyfpf.lcl/versoftly0.4/core/versoftly3.ico">
+
     </head>
 
     <body class="borde">
