@@ -1,20 +1,3 @@
-# versoftly0.4
-
-<h1>CARACTERISTICAS PRINCIPALES</h1>
-
-<ol>
-    <li>Sistema Multiusuario</li>
-    <li>root and notRoot users</li>
-    <li>registro e inicio de sesion</li>
-    <li>single page post visualizacion</li>
-    <li>admin section</li>
-    <li>crud operations para post y para usuarios</li>
-    <li>estructura : html, archivos y carpetas </li>
-    <li>layout css</li>
-    <li>validacion de seguridad para formularios basica</li>
-    <li>css rules</li>
-</ol>
-
 <p>
     El soporte para este proyecto termino en Dec 28 alas 22:30 del a&ntilde;o 2023.<br>
 </p>
@@ -22,7 +5,20 @@
     cheque las versiones 0.4 a la 0.8 aqui mismo.<br><br>
     para descargar versiones anteriores ala 0.4 visite versoftly.com<br>
     <br><br>
-    <em>Siguiente version : versoftly0.9 modo de lanzamiento y obtencion (desconocidos)</em>
+    <em># versoftly0.9</em>
+    <h1>CARACTERISTICAS</h1>
+    <pre>
+        registro de usuario,
+        inicio de sesion,
+        interfaz grafica amigable y facil de usar
+        eliminacion de articulos
+        actualizacion de articulos
+        creacion de articulos
+        cerrar sesion
+        responsive design
+    </pre>
+    <a href="https://versoftly.com/versoftly.com/">DEMO</a>
+    <a href="https://versoftly.com/versoftly.com/versoftly0.9">Descargar source code</a>
 </p>
 
 <a href="https://www.versoftly.com">versoftly - 0.4</a>
