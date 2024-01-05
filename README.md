@@ -17,7 +17,7 @@
         cerrar sesion
         responsive design
     </pre>
-    <a href="https://versoftly.com/versoftly.com/">DEMO</a>
+    <a href="https://versoftly.com/versoftly.com/">DEMO</a><br><br>
     <a href="https://versoftly.com/versoftly.com/versoftly0.9">Descargar source code</a>
 </p>
 
