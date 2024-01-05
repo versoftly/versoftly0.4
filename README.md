@@ -22,8 +22,7 @@
 </p>
 
 <a href="https://www.versoftly.com">versoftly - 0.4</a>
-<br><br><br>
-<a href="http://versoftlyfpf.lcl">versoftly - 0.4 - localhost - url</a>
+<br><br>
 
 <h2>Crear el VirtualHost Para trabajar con La version en local versoftly 0.4</h2>
 
